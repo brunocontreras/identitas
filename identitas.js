@@ -222,8 +222,8 @@ export default [
             type: TYPE.COURSE
           },
           {
-            name: "El profesor Jefe DAIP",
-            image: "img/formacion/cbep/profesor_jefe_daip.jpg",
+            name: "El Profesor Jefe Chile Arauco",
+            image: "img/formacion/cbep/profesor_jefe.jpg",
             type: TYPE.COURSE
           },
           {
@@ -234,6 +234,36 @@ export default [
           {
             name: "Aprender a amar",
             image: "img/formacion/cbep/aprender_a_amar.jpg",
+            type: TYPE.COURSE
+          },
+          {
+            name: "Curso básico preceptoría",
+            image: "img/formacion/cbep/curso_basico_preceptoria.jpg",
+            type: TYPE.COURSE
+          },
+          {
+            name: "Seminario Internacional Dirigir Personas en la escuela",
+            image: "img/formacion/cbep/seminario.jpg",
+            type: TYPE.COURSE
+          },
+          {
+            name: "Identidad Cristiana 1 ASPAEN",
+            image: "img/formacion/cbep/identidad_cristiana_1_aspaen.jpg",
+            type: TYPE.COURSE
+          },
+          {
+            name: "Identidad Cristiana 2 ASPAEN",
+            image: "img/formacion/cbep/identidad_cristiana_2_aspaen.jpg",
+            type: TYPE.COURSE
+          },
+          {
+            name: "El Director de curso ASPAEN",
+            image: "img/formacion/cbep/el_director_de_curso_aspaen.jpg",
+            type: TYPE.COURSE
+          },
+          {
+            name: "Fundamentos",
+            image: "img/formacion/cbep/fundamentos.jpg",
             type: TYPE.COURSE
           }
         ]
