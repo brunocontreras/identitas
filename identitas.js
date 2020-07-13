@@ -277,6 +277,11 @@ export default [
             name: "Clausuras DAIP",
             image: "img/formacion/otroscursos/clausuras_daip.jpg",
             type: TYPE.COURSE
+          },
+          {
+            name: "Curso de actualización EXPERTO DAIP",
+            image: "img/formacion/otroscursos/curso_actualizacion.jpg",
+            type: TYPE.COURSE
           }
         ]
       }
