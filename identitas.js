@@ -222,7 +222,7 @@ export default [
             type: TYPE.COURSE
           },
           {
-            name: "El Profesor Jefe Chile Arauco",
+            name: "El Profesor Jefe Chile",
             image: "img/formacion/cbep/profesor_jefe.jpg",
             type: TYPE.COURSE
           },
