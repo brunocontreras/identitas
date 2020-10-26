@@ -143,7 +143,59 @@ export default [
       {
         name: "Mentoring familiar",
         image: "img/expertos/mentoring_familiar.jpg",
-        type: TYPE.COURSE
+        type: TYPE.SECTION,
+        children: [
+          {
+            name: "1 El Mentoring Familiar DAIP",
+            image: "img/expertos/mentoring/1.jpg",
+            type: TYPE.COURSE
+          },
+          {
+            name: "2 La persona DAIP, el fundamento",
+            image: "img/expertos/mentoring/2.jpg",
+            type: TYPE.COURSE
+          },
+          {
+            name: "3 Hombre-Mujer, la diacronía del amor",
+            image: "img/expertos/mentoring/3.jpg",
+            type: TYPE.COURSE
+          },
+          {
+            name: "4 Dios sabe mucho de amor",
+            image: "img/expertos/mentoring/4.jpg",
+            type: TYPE.COURSE
+          },
+          {
+            name: "5 La materialidad del amor conyugal",
+            image: "img/expertos/mentoring/5.jpg",
+            type: TYPE.COURSE
+          },
+          {
+            name: "6 Emociones, pasiones y sentimientos en el amor",
+            image: "img/expertos/mentoring/6.jpg",
+            type: TYPE.COURSE
+          },
+          {
+            name: "7 El amor inteligente siempre es nuevo",
+            image: "img/expertos/mentoring/7.jpg",
+            type: TYPE.COURSE
+          },
+          {
+            name: "8 Ser libre para amar mejor",
+            image: "img/expertos/mentoring/8.jpg",
+            type: TYPE.COURSE
+          },
+          {
+            name: "9 El Mentoring de la infidelidad",
+            image: "img/expertos/mentoring/9.jpg",
+            type: TYPE.COURSE
+          },
+          {
+            name: "10 La felicidad, consecuencia del amor",
+            image: "img/expertos/mentoring/10.jpg",
+            type: TYPE.COURSE
+          }
+        ]
       }
     ]
   },
