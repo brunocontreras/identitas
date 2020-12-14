@@ -294,7 +294,7 @@ export default [
             type: TYPE.COURSE
           },
           {
-            name: "Seminario Internacional Dirigir Personas en la escuela",
+            name: "Dirección Centrada en Personas",
             image: "img/formacion/cbep/seminario.jpg",
             type: TYPE.COURSE
           },
