@@ -1,7 +1,7 @@
 "use strict";
 
 import { app, protocol, BrowserWindow } from "electron";
-import { createProtocol, installVueDevtools } from "vue-cli-plugin-electron-builder/lib";
+import { createProtocol } from "vue-cli-plugin-electron-builder/lib";
 import { autoUpdater } from "electron-updater";
 import log from "electron-log";
 
@@ -69,11 +69,12 @@ app.on("activate", () => {
 app.on("ready", async () => {
   if (isDevelopment && !process.env.IS_TEST) {
     // Install Vue Devtools
-    try {
-      await installVueDevtools();
-    } catch (e) {
-      console.error("Vue Devtools failed to install:", e.toString());
-    }
+    // DISABLED: Commented out due to unzip-crx compatibility issues with CRX3 format
+    // try {
+    //   await installVueDevtools();
+    // } catch (e) {
+    //   console.error("Vue Devtools failed to install:", e.toString());
+    // }
   }
   createWindow();
   autoUpdater.checkForUpdatesAndNotify();
