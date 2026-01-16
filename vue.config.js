@@ -6,7 +6,8 @@ module.exports = {
     electronBuilder: {
       builderOptions: {
         productName: "identitas",
-        appId: "com.educarpersonas"
+        appId: "com.educarpersonas",
+        publish: ["github"]
       }
     }
   },
