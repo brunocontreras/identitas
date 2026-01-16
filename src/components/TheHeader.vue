@@ -75,13 +75,13 @@ export default {
     },
     update() {
       // if (process.platform === "darwin") {
-      shell.openExternal("https://identitas.netlify.com/");
+      shell.openExternal("https://identitas.netlify.app/");
       // } else {
       //   ipcRenderer.send("update");
       // }
     },
     openInfo() {
-      shell.openExternal("https://identitas.netlify.com/carpetas");
+      shell.openExternal("https://identitas.netlify.app/carpetas");
     }
   }
 };
