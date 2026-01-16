@@ -1,29 +1,24 @@
-# identitas
+# Identitas
 
-## Project setup
-```
-yarn install
-```
+## Para compilar el proyecto
 
-### Compiles and hot-reloads for development
-```
-yarn run serve
-```
+Versión de node: 12.22.12
+Instalación de dependencias con yarn: 1.22.22
 
-### Compiles and minifies for production
-```
-yarn run build
-```
+`yarn install`
+`yarn electron:build`
+`yarn electron:serve`
 
-### Run your tests
-```
-yarn run test
-```
+## Documentación oficial
 
-### Lints and fixes files
-```
-yarn run lint
-```
+Página con la documentación: https://identitas.netlify.app/
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Para añadir un curso nuevo.
+
+1. Nombre del curso y añadirlo en el fichero `identitas.js`
+2. Imagen en la carpeta `/src/assets/img` con dimensiones 2000x2000
+
+## Comentarios
+
+- No he conseguido hacerlo funcionar con el npm de la versión de node
+- Se han eliminado las DevTools de Vue porque hay un problema con la dependencia que instala la extensión de chrome.
