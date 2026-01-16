@@ -53,7 +53,7 @@ jobs:
             ${{ runner.os }}-electron-
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: yarn install --frozen-lockfile --ignore-optional
 
       - name: Build Electron app (macOS)
         if: matrix.os == 'macos-15-intel'
