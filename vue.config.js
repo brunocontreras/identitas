@@ -8,7 +8,8 @@ module.exports = {
         productName: "identitas",
         appId: "com.educarpersonas",
         publish: ["github"]
-      }
+      },
+      nodeIntegration: true
     }
   },
   css: {
