@@ -25,12 +25,12 @@ jobs:
       - name: Checkout LFS objects
         run: git lfs pull
 
-      - name: Setup Python 2
-        id: setup-python
-        if: matrix.os == 'macos-15-intel'
-        uses: actions/setup-python@v4
-        with:
-          python-version: '2.7'
+      # - name: Setup Python 2
+      #   id: setup-python
+      #   if: matrix.os == 'macos-15-intel'
+      #   uses: actions/setup-python@v4
+      #   with:
+      #     python-version: '2.7'
 
       # - name: Set up Python 3.10
       #   id: setup-python
@@ -80,7 +80,7 @@ jobs:
         run: yarn electron:build --mac
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          PYTHON: ${{ steps.setup-python.outputs.python-path }}
+          PYTHON: python3
 
       - name: Build Electron app (Linux)
         if: matrix.os == 'ubuntu-latest'
