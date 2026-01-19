@@ -25,6 +25,7 @@ jobs:
         run: git lfs pull
 
       - name: Set up Python 3.10
+        id: setup-python
         if: matrix.os == 'macos-15-intel'
         uses: actions/setup-python@v5
         with:
@@ -66,6 +67,7 @@ jobs:
         run: yarn electron:build --mac
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PYTHON: ${{ steps.setup-python.outputs.python-path }}
 
       - name: Build Electron app (Linux)
         if: matrix.os == 'ubuntu-latest'
