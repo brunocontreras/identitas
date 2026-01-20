@@ -2,7 +2,7 @@
 
 ## Para compilar el proyecto
 
-Versión de node: 12.22.12
+Versión de node: 16.20.2 (última de v16)
 Instalación de dependencias con yarn: 1.22.22
 
 `yarn install`
@@ -22,3 +22,7 @@ Página con la documentación: https://identitas.netlify.app/
 
 - No he conseguido hacerlo funcionar con el npm de la versión de node
 - Se han eliminado las DevTools de Vue porque hay un problema con la dependencia que instala la extensión de chrome.
+
+# Creación de los ejecutables
+
+Se han dejado de utilizar appveyor y travis para crear los ejecutables de windows y mac. Ahora se utiliza Github Actions.
