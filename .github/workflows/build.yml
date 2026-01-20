@@ -25,25 +25,6 @@ jobs:
       - name: Checkout LFS objects
         run: git lfs pull
 
-      # - name: Setup Python 2
-      #   id: setup-python
-      #   if: matrix.os == 'macos-15-intel'
-      #   uses: actions/setup-python@v4
-      #   with:
-      #     python-version: '2.7'
-
-      # - name: Set up Python 3.10
-      #   id: setup-python
-      #   if: matrix.os == 'macos-15-intel'
-      #   uses: actions/setup-python@v5
-      #   with:
-      #     python-version: '3.10'
-
-      # - name: Fix Python path
-      #   run: |
-      #     sudo ln -sf $(which python3) /usr/local/bin/python
-      #     echo "/usr/local/bin" >> $GITHUB_PATH
-
       - name: Install Node.js
         uses: actions/setup-node@v4
         with:
@@ -80,7 +61,6 @@ jobs:
         run: yarn electron:build --mac
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          PYTHON: python3
 
       - name: Build Electron app (Linux)
         if: matrix.os == 'ubuntu-latest'
