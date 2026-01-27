@@ -196,6 +196,78 @@ export default [
             type: TYPE.COURSE
           }
         ]
+      },
+      {
+        name: "TPF",
+        image: "img/expertos/tpf.jpg",
+        type: TYPE.SECTION,
+        children: [
+          {
+            name: "1. La persona, en el centro de la educación",
+            image: "img/expertos/tpf/1.jpg",
+            type: TYPE.COURSE
+          },
+          {
+            name: "2. Familia y Educación",
+            image: "img/expertos/tpf/2.jpg",
+            type: TYPE.COURSE
+          },
+          {
+            name: "3. La educación de la corporalidad",
+            image: "img/expertos/tpf/3.jpg",
+            type: TYPE.COURSE
+          },
+          {
+            name: "4. La educación de la afectividad",
+            image: "img/expertos/tpf/4.jpg",
+            type: TYPE.COURSE
+          },
+          {
+            name: "5. La educación de la inteligencia",
+            image: "img/expertos/tpf/5.jpg",
+            type: TYPE.COURSE
+          },
+          {
+            name: "6. La educación de la voluntad y el caracter",
+            image: "img/expertos/tpf/6.jpg",
+            type: TYPE.COURSE
+          },
+          {
+            name: "7. Únicos e irrepetibles, la singularidad",
+            image: "img/expertos/tpf/7.jpg",
+            type: TYPE.COURSE
+          },
+          {
+            name: "8. Abiertos al mundo y a los demás",
+            image: "img/expertos/tpf/8.jpg",
+            type: TYPE.COURSE
+          },
+          {
+            name: "9. La conexión con el origen",
+            image: "img/expertos/tpf/9.jpg",
+            type: TYPE.COURSE
+          },
+          {
+            name: "10. Educar en la era digital",
+            image: "img/expertos/tpf/10.jpg",
+            type: TYPE.COURSE
+          },
+          {
+            name: "11. La tutoría personal y grupal",
+            image: "img/expertos/tpf/11.jpg",
+            type: TYPE.COURSE
+          },
+          {
+            name: "12. La entrevista con el alumno",
+            image: "img/expertos/tpf/12.jpg",
+            type: TYPE.COURSE
+          },
+          {
+            name: "13. La entrevista con los padres",
+            image: "img/expertos/tpf/13.jpg",
+            type: TYPE.COURSE
+          }
+        ]
       }
     ]
   },
