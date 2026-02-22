@@ -3,19 +3,13 @@ name: Build Identitas
 on:
   push:
     branches:
-      - master
       - feature/nuevo-curso
     tags:
       - 'v*'
 
 jobs:
-  build:
-    runs-on: ${{ matrix.os }}
-
-    strategy:
-      matrix:
-        # os: [macos-15-intel, ubuntu-latest, windows-latest]
-        os: [windows-latest]
+  build-windows:
+    runs-on: windows-latest
 
     steps:
       - name: Check out Git repository
@@ -48,8 +42,8 @@ jobs:
         uses: actions/cache@v4
         with:
           path: |
-            ~/.cache/electron
-            ~/.cache/electron-builder
+            ~\AppData\Local\electron\Cache
+            ~\AppData\Local\electron-builder\Cache
           key: ${{ runner.os }}-electron-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-electron-
@@ -57,41 +51,7 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile
 
-      - name: Build Electron app (macOS)
-        if: matrix.os == 'macos-15-intel'
-        run: yarn electron:build --mac
+      - name: Build and publish Electron app (Windows)
+        run: yarn electron:build --win --publish always
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Build Electron app (Linux)
-        if: matrix.os == 'ubuntu-latest'
-        run: yarn electron:build --linux
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Build Electron app (Windows)
-        if: matrix.os == 'windows-latest'
-        run: yarn electron:build --win
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Upload artifacts (macOS)
-        if: matrix.os == 'macos-15-intel'
-        uses: actions/upload-artifact@v4
-        with:
-          name: macos-build
-          path: dist_electron/*.dmg
-
-      - name: Upload artifacts (Linux)
-        if: matrix.os == 'ubuntu-latest'
-        uses: actions/upload-artifact@v4
-        with:
-          name: linux-build
-          path: dist_electron/*.AppImage
-
-      - name: Upload artifacts (Windows)
-        if: matrix.os == 'windows-latest'
-        uses: actions/upload-artifact@v4
-        with:
-          name: windows-build
-          path: dist_electron/*.exe
